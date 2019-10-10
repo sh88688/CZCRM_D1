@@ -1,4 +1,4 @@
-import fetchCall from '../components/fetchCaller';
+import { fetchCall } from '../functions/modularFunc';
 import React, { Component } from "react";
 import { MDBContainer, MDBRow } from "mdbreact";
 import VerticalBarChart from '../components/verticalBarChart';
@@ -17,7 +17,7 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       isOpen: false,
-      isGraphLoaded: true,
+      isGraphLoaded: false,
       totalTickets: {
         data: {
           primary: {
@@ -92,6 +92,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
+    // this.authHandle();
     this.updateHandle();
   }
 
@@ -112,7 +113,7 @@ class Dashboard extends Component {
         }
         else{
           let dataObject  = data;
-          console.log('data ==> ',dataObject);
+          this.setState({isGraphLoaded : true});
           this.updateDataState(dataObject,"categoryTickets");
           this.updateDataState(dataObject,"priorityTickets");
           this.updateDataState(dataObject,"statusTickets");
@@ -125,8 +126,34 @@ class Dashboard extends Component {
 
   }
 
+  authHandle = () =>{
+    const url = new URL(`http://api.cz-tuts.com/dashboard`);
+    const fetchCallOptions ={
+          method:"post",
+          credentials:'include', 
+          headers: {
+           'Content-Type': 'application/json' 
+          }
+      };
+    try {
+      const result = fetchCall(url, fetchCallOptions, "json");
+      console.log(result);
+      result.then(data => {
+        if(data.status==1){
+          this.updateHandle();
+        }
+        else{
+          // error message here
+        }
+      });
+    }
+    catch (error) {
+        console.log(error);
+    }
+  }
+
   // async  updateHandle() {
-	//     const	postData	=	{};
+	//  const	postData	=	{};
 	// 	postData.clientId	=	"1";
   //   const 	postJson	=	JSON.stringify(postData);
   //   try {
@@ -172,7 +199,6 @@ class Dashboard extends Component {
 			
 		
   // }
-
   toggleCollapse = () =>{
     this.setState({isOpen : !this.state.isOpen});
   }

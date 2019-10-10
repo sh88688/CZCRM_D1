@@ -92,8 +92,8 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    this.authHandle();
-    // this.updateHandle();
+    // this.authHandle();
+    this.updateHandle();
   }
 
   updateHandle = () => {

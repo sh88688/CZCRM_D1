@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import fetchCall from '../components/fetchCaller';
+import { fetchCall } from '../functions/modularFunc';
 //import Config from "../static/configs/urlConfig.json";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 import "@fortawesome/fontawesome-free/css/all.min.css";

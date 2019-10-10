@@ -14,4 +14,7 @@ const fetchCall = async (url, options, type) =>
         
       }
     };
-export default fetchCall;
+    
+export {
+    fetchCall
+};

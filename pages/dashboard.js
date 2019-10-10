@@ -7,9 +7,8 @@ import CardContent from '../components/cardContent';
 import Header from '../components/header';
 import ConfigData from '../data/configData.json';
 import PieChart from '../components/pieChart';
-// import { configGraph, configCard, configPrmArray }	from "../static/DashboardConfig.js"	;
 import LoadingContent from '../components/loadingContent';
-import "../Styles/dashboard.css";
+import "../static/css/dashboard.css";
 
 class Dashboard extends Component {
   constructor(props)
@@ -55,13 +54,12 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    // this.authHandle();
-    this.updateHandle();
+    this.authHandle();
   }
 
   updateHandle = () => {
     const postData          =       {};
-    postData.clientId       =       "1";
+    postData.clientId       =       "2";
     const   postJson        =       JSON.stringify(postData);
     const queryParam = `?postData=${postJson}`;
     const url = new URL(`http://172.16.3.46/CZCRM/api/dashboard_request.php${queryParam}`);
@@ -82,82 +80,42 @@ class Dashboard extends Component {
     catch (error) {
         console.log(error);
     }
-
   }
 
-  authHandle = () =>{
+  authHandle = async () => {
     const url = new URL(`http://api.cz-tuts.com/dashboard`);
-    const fetchCallOptions ={
-          method:"post",
-          credentials:'include', 
-          headers: {
-           'Content-Type': 'application/json' 
-          }
-      };
-    try {
-      const result = fetchCall(url, fetchCallOptions, "json");
-      console.log(result);
-      result.then(data => {
-        if(data.status==1){
-          this.updateHandle();
-        }
-        else{
-          // error message here
-        }
-      });
+    const fetchCallOptions = {
+    method: "post",
+    credentials: 'include',
+    headers: {
+    'Content-Type': 'application/json'
     }
-    catch (error) {
-        console.log(error);
-    }
-  }
+    };
+      try {
+          const resData = await fetch(url, fetchCallOptions);
+          if (resData.status == 200) {
+          const jsonData = await resData.json();
+          console.log('data my ',jsonData);
+          if (jsonData.status == 1) {
+          const data = jsonData.data;
+          let dataObject = data;
+          this.updateDataState(dataObject);
+          } 
+          else {
 
-  // async  updateHandle() {
-	//  const	postData	=	{};
-	// 	postData.clientId	=	"1";
-  //   const 	postJson	=	JSON.stringify(postData);
-  //   try {
-  //   const resData= await	fetch(`http://api.cz-tuts.com/dashboard`,
-  //   {
-  //     method:"post",
-  //     credentials:'include', 
-  //     headers: {
-  //      'Content-Type': 'application/json' 
-  //     }
-  // })
-  // if(resData.status==200){
-  //   const jsonData=await resData.json();
-  
-  //   if(jsonData.status==1){
-  //     const data=jsonData.data;
-  //     // console.log(jsonData);
-  //     let dataObject	= data;
-  //     this.setState({isGraphLoaded:true});
-  //     this.updateDataState(dataObject.tickets,"totalTickets",configPrmArray.tickets);
-  //     this.updateDataState(dataObject.mails,"totalMails",configPrmArray.mails);
-  //     this.updateDataState(dataObject.users,"totalUsers",configPrmArray.users);								
-  //     this.setState({priorityPie:dataObject.priorityTickets});
-  //     this.setState({categoryPie:dataObject.categoryTickets});
-  //     this.setState({statusBar:dataObject.statusTickets});
-  //   }  
-  //   else{
-      
-  //   }
-  // }
-  // else{
-  //   console.log(resData.status);
-  //     if(resData.status==401 || resData.status==403){
-       
-  //       window.location="/auth";
-  //     }
-  // }
-    
-  //   }
-	// 	catch(err){
-  //       console.log(err);
-  //   }
-			
-		
-  // }
+          }
+          } else {
+          console.log(resData.status);
+          if (resData.status == 401 || resData.status == 403) {
+          window.location = "/auth";
+          }
+          }
+      } 
+      catch (error) {
+        console.log(error);
+      }
+    }
+
 
   toggleCollapse = () =>{
     this.setState({isOpen : !this.state.isOpen});

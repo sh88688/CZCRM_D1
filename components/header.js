@@ -1,12 +1,38 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon} from "mdbreact";
-import Link from 'next/link'
-import "../styles/dashboard.css";
+import "../static/css/dashboard.css";
 class Header extends React.Component {
   constructor(props)
   {
     super(props);
   }
+  logoutHandle = async () => {
+    const url = new URL(`http://api.cz-tuts.com/logout`);
+    const fetchCallOptions = {
+    method: "post",
+    credentials: 'include',
+    headers: {
+    'Content-Type': 'application/json'
+    }
+    };
+      try {
+          const resData = await fetch(url, fetchCallOptions);
+          if (resData.status == 200) {
+              const jsonData = await resData.json();
+              if (jsonData.status == 0) {
+                window.location = "/auth";
+              }
+          } 
+          else {
+            if (resData.status == 401 || resData.status == 403) {
+            // window.location = "/auth";
+            }
+          }
+      } 
+      catch (error) {
+        console.log(error);
+      }
+    }
   render(){
     const {title, isOpen, collapse} = this.props;
 
@@ -28,7 +54,7 @@ class Header extends React.Component {
                   <MDBDropdownItem href="profile"><MDBIcon className={`mr-2`} icon="user-circle" />My Profile</MDBDropdownItem>
                   <MDBDropdownItem href="dashboard"><MDBIcon className={`mr-2`} icon="home" />Dashboard</MDBDropdownItem>
                   <MDBDropdownItem href="#!"><MDBIcon className={`mr-2`} icon="key" />Change Password</MDBDropdownItem>
-                  <MDBDropdownItem href="#!" onClick={() => alert()}><MDBIcon className={`mr-2`} icon="power-off" />Logout</MDBDropdownItem>
+                  <MDBDropdownItem href="#!" onClick={this.logoutHandle}><MDBIcon className={`mr-2`} icon="power-off" />Logout</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>

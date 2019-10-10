@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
-import "../styles/dashboard.css";
+import "../static/css/dashboard.css";
 
 const options = {
   legend: {

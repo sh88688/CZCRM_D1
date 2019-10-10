@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {MDBProgress, MDBCol, MDBRow} from "mdbreact";
-import "../styles/dashboard.css";
+import "../static/css/dashboard.css";
 
 class CardContent extends Component{
     constructor(props){

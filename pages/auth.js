@@ -13,9 +13,7 @@ class  AuthPage extends Component  {
     this.state={email:"",password:""}
   }
   clickHandler = (event) => {
-    event.preventDefault();
-    window.location="/dashboard";  
-    /*
+    event.preventDefault(); 
     const url = new URL(`http://api.cz-tuts.com/login`);
     const reqBody={
       email: this.state.email,
@@ -32,7 +30,7 @@ class  AuthPage extends Component  {
     //API CALL:
     const result = fetchCall(url, fetchCallOptions, "json");   
     result.then(function(data){
-        // console.log(data);
+        console.log('data ==> ',data);
      if(data.status){
         // toaster.success("Successfully Logged In");
         document.cookie='nodeSessID='+data.nodeSessID+";maxAge=3600000;path='/';domain='cz-tuts.com'";
@@ -41,7 +39,6 @@ class  AuthPage extends Component  {
      else{
       alert(data.message);
      }});
-     */
   }
    inputHandler = (event) =>{
     this.setState({[event.target.name]:event.target.value});

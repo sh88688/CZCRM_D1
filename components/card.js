@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MDBIcon, MDBCol, MDBCard, MDBCardBody, MDBCardText } from "mdbreact";
-import "../styles/dashboard.css";
+import "../static/css/dashboard.css";
 
 class Cards extends Component{
     constructor(props){

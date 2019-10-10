@@ -5,7 +5,7 @@ import VerticalBarChart from '../components/verticalBarChart';
 import Card from '../components/card';
 import CardContent from '../components/cardContent';
 import Header from '../components/header';
-import ConfigData from '../Data/ConfigData.json';
+import ConfigData from '../data/configData.json';
 import PieChart from '../components/pieChart';
 // import { configGraph, configCard, configPrmArray }	from "../static/DashboardConfig.js"	;
 import LoadingContent from '../components/loadingContent';
@@ -19,52 +19,13 @@ class Dashboard extends Component {
       isOpen: false,
       isGraphLoaded: false,
       totalTickets: {
-        data: {
-          primary: {
-            title: "Tickets Created",
-            value: 435,
-            progress_title: "Closed",
-            progress_value: 5
-          },
-          secondary: {
-            title: "Tickets Escalated",
-            value: 49,
-            progress_title: "Escalation Rate",
-            progress_value: 74
-          }
-        }
+        data: {}
       },
       totalMails: {
-        data: {
-          primary: {
-            title: "Mails Received",
-            value: 1543,
-            progress_title: "Mails Replied",
-            progress_value: 9
-          },
-          secondary: {
-            title: "Fresh Mails Received",
-            value: 36,
-            progress_title: "Fresh Mails Replied",
-            progress_value: 46
-          }
-        }
+        data: {}
       },
       totalUsers: {
-        data: {
-          primary: {
-            title: "Users",
-            value: 738,
-            progress_title: "Active Users",
-            progress_value: 10
-          },
-          secondary: {
-            title: "Loggedin Users",
-            value: 256,
-            progress_title: "Locked Ticket Users",
-            progress_value: 12
-          }
-        }
+        data: {}
       },
       categoryTickets: {
         chart: PieChart,
@@ -83,12 +44,14 @@ class Dashboard extends Component {
    
   }
 
-  updateDataState = (dataObject,TYPE) => {
-    let copyData  =   {};
-    copyData = {...this.state[TYPE]};
-    copyData.data = dataObject[TYPE].data;
-    this.setState({[TYPE] : copyData});
-
+  updateDataState = (dataObject) => {
+    ['totalTickets','totalMails','totalUsers','categoryTickets','priorityTickets','statusTickets'].forEach((type)=>{
+      let copyData  =   {};
+      copyData = {...this.state[type]};
+      copyData.data = dataObject[type].data;
+      this.setState({[type] : copyData});
+    });
+    this.setState({isGraphLoaded : true});
   }
 
   componentDidMount() {
@@ -107,16 +70,12 @@ class Dashboard extends Component {
      };
     try {
       const result = fetchCall(url, fetchCallOptions, "json");
-      result.then(data => {
-        if(data.status == 'error'){
+      result.then(dataObject => {
+        if(dataObject.status == 'error'){
           // error message here
         }
         else{
-          let dataObject  = data;
-          this.setState({isGraphLoaded : true});
-          this.updateDataState(dataObject,"categoryTickets");
-          this.updateDataState(dataObject,"priorityTickets");
-          this.updateDataState(dataObject,"statusTickets");
+          this.updateDataState(dataObject);
         }
       });
     }
@@ -199,6 +158,7 @@ class Dashboard extends Component {
 			
 		
   // }
+
   toggleCollapse = () =>{
     this.setState({isOpen : !this.state.isOpen});
   }
@@ -217,7 +177,7 @@ class Dashboard extends Component {
 				</MDBRow>
 			</MDBContainer>
 		)
-	 }
+   }
 	 else{
 		return (
       <MDBContainer fluid>
@@ -227,7 +187,7 @@ class Dashboard extends Component {
       <MDBRow className="mt-4">
           {progressModule.map((module, index) => (
             <Card key={index} config={ConfigData[module]}
-             content={<CardContent key={index} data={this.state[module].data}/>}
+             content={<CardContent key={index} config={ConfigData[`${module}Config`]} data={this.state[module].data}/>}
             />
           ))}
       </MDBRow>

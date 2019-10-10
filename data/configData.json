@@ -5,17 +5,47 @@
         "icon": "ticket-alt",
         "color": "blue"
     },
+    "totalTicketsConfig":{
+        "primary": {
+            "title": "Tickets Created",
+            "progress_title": "Closed"
+          },
+          "secondary": {
+            "title": "Tickets Escalated",
+            "progress_title": "Escalation Rate"
+          }
+    },
     "totalMails": {
         "type": "cardContent",
         "header": "Total Ticket Mails",
         "icon": "envelope",
         "color": "peach"
     },
+    "totalMailsConfig":{
+        "primary": {
+            "title": "Mails Received",
+            "progress_title": "Mails Replied"
+          },
+          "secondary": {
+            "title": "Fresh Mails Received",
+            "progress_title": "Fresh Mails Replied"
+          }
+    },
     "totalUsers": {
         "type": "cardContent",
         "header": "All Ticket Users",
         "icon": "users",
         "color": "purple"
+    },
+    "totalUsersConfig":{
+            "primary": {
+              "title": "Users",
+              "progress_title": "Active Users"
+            },
+            "secondary": {
+              "title": "Loggedin Users",
+              "progress_title": "Locked Ticket Users"
+            }
     },
     "categoryTickets": {
         "type": "chart",

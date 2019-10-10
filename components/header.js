@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon} from "mdbreact";
 import Link from 'next/link'
-import "../Styles/dashboard.css";
+import "../styles/dashboard.css";
 class Header extends React.Component {
   constructor(props)
   {

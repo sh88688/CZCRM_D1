@@ -6,7 +6,7 @@ class LoadingContent extends Component{
     }
 	render(){
 		return(
-			<img src="https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif" className="img-fluid" alt="" />
+			<img style={{marginTop:"100px"}} src="https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif" className="img-fluid" alt="" />
 		);
 	}
 }

@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 
-// function CreateOptions(obj){
-// 	let objOption	=	JSON.parse(obj);
-// 	let data	= Object.keys(objOption).map(val => <option value={val}>{objOption[val]}</option>);
-// 	return data;
-// }
-
 class SelectBox extends Component{
 	constructor(props)
 	{

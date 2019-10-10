@@ -139,8 +139,6 @@ class  AuthPage extends Component  {
           </MDBCard>
         </MDBCol>
         <MDBCol md="5">
-        
-
             <div className="left-card-login">
              <img src="static/img/worldmap.png"></img>
             </div>

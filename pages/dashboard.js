@@ -17,7 +17,7 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       isOpen: false,
-      isGraphLoaded: true,
+      isGraphLoaded: false,
       totalTickets: {
         data: {
           primary: {
@@ -113,7 +113,7 @@ class Dashboard extends Component {
         }
         else{
           let dataObject  = data;
-          console.log('data ==> ',dataObject);
+          this.setState({isGraphLoaded : true});
           this.updateDataState(dataObject,"categoryTickets");
           this.updateDataState(dataObject,"priorityTickets");
           this.updateDataState(dataObject,"statusTickets");
@@ -151,6 +151,7 @@ class Dashboard extends Component {
         console.log(error);
     }
   }
+
   // async  updateHandle() {
 	//  const	postData	=	{};
 	// 	postData.clientId	=	"1";
@@ -198,7 +199,6 @@ class Dashboard extends Component {
 			
 		
   // }
-
   toggleCollapse = () =>{
     this.setState({isOpen : !this.state.isOpen});
   }

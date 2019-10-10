@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -6372,7 +6372,7 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
   }
 
   componentDidMount() {
-    this.updateHandle(); // setInterval(this.updateHandle,3000);
+    this.updateHandle();
   }
 
   render() {
@@ -6384,13 +6384,13 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
         fluid: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 185
         },
         __self: this
       }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_5__["MDBRow"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 186
         },
         __self: this
       }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -6399,20 +6399,20 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
         collapse: () => this.toggleCollapse,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 193
+          lineNumber: 187
         },
         __self: this
       })), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_5__["MDBRow"], {
         className: "justify-content-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 189
         },
         __self: this
       }, __jsx(_components_loadingContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 190
         },
         __self: this
       })));
@@ -6421,13 +6421,13 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
         fluid: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 203
+          lineNumber: 197
         },
         __self: this
       }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_5__["MDBRow"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 204
+          lineNumber: 198
         },
         __self: this
       }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -6436,14 +6436,14 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 205
+          lineNumber: 199
         },
         __self: this
       })), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_5__["MDBRow"], {
         className: "mt-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 201
         },
         __self: this
       }, progressModule.map((module, index) => __jsx(_components_card__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -6454,19 +6454,19 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
           data: this.state[module].data,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 210
+            lineNumber: 204
           },
           __self: this
         }),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 209
+          lineNumber: 203
         },
         __self: this
       }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_5__["MDBRow"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 214
+          lineNumber: 208
         },
         __self: this
       }, chartModule.map((module, index) => {
@@ -6479,13 +6479,13 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
             data: this.state[module].data,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 219
+              lineNumber: 213
             },
             __self: this
           }),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 218
+            lineNumber: 212
           },
           __self: this
         });
@@ -6499,7 +6499,7 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./pages/dashboard.js ***!
   \**********************************/

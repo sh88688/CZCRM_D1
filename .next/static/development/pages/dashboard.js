@@ -110692,7 +110692,7 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Dashboard, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.updateHandle(); // setInterval(this.updateHandle,3000);
+      this.updateHandle();
     }
   }, {
     key: "render",
@@ -110707,13 +110707,13 @@ function (_Component) {
           fluid: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 191
+            lineNumber: 185
           },
           __self: this
         }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_11__["MDBRow"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 192
+            lineNumber: 186
           },
           __self: this
         }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -110724,20 +110724,20 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 193
+            lineNumber: 187
           },
           __self: this
         })), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_11__["MDBRow"], {
           className: "justify-content-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 195
+            lineNumber: 189
           },
           __self: this
         }, __jsx(_components_loadingContent__WEBPACK_IMPORTED_MODULE_18__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 196
+            lineNumber: 190
           },
           __self: this
         })));
@@ -110746,13 +110746,13 @@ function (_Component) {
           fluid: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203
+            lineNumber: 197
           },
           __self: this
         }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_11__["MDBRow"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 204
+            lineNumber: 198
           },
           __self: this
         }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -110761,14 +110761,14 @@ function (_Component) {
           isOpen: this.state.isOpen,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 205
+            lineNumber: 199
           },
           __self: this
         })), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_11__["MDBRow"], {
           className: "mt-4",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 207
+            lineNumber: 201
           },
           __self: this
         }, progressModule.map(function (module, index) {
@@ -110780,20 +110780,20 @@ function (_Component) {
               data: _this2.state[module].data,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 210
+                lineNumber: 204
               },
               __self: this
             }),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 209
+              lineNumber: 203
             },
             __self: this
           });
         })), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_11__["MDBRow"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 214
+            lineNumber: 208
           },
           __self: this
         }, chartModule.map(function (module, index) {
@@ -110806,13 +110806,13 @@ function (_Component) {
               data: _this2.state[module].data,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 219
+                lineNumber: 213
               },
               __self: this
             }),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 218
+              lineNumber: 212
             },
             __self: this
           });
@@ -110828,7 +110828,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 0:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fdashboard&absolutePagePath=%2Fhome%2Fshivam-c-zentrix%2FDesktop%2FCZCRM_D1%2Fpages%2Fdashboard.js ***!
   \************************************************************************************************************************************************/
@@ -110851,5 +110851,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=dashboard.js.map

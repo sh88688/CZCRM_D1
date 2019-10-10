@@ -1,0 +1,38 @@
+{
+    "totalTickets" : {
+        "type" : "cardContent",
+        "header": "Total Tickets",
+        "icon": "ticket-alt",
+        "color": "blue"
+    },
+    "totalMails": {
+        "type": "cardContent",
+        "header": "Total Ticket Mails",
+        "icon": "envelope",
+        "color": "peach"
+    },
+    "totalUsers": {
+        "type": "cardContent",
+        "header": "All Ticket Users",
+        "icon": "users",
+        "color": "purple"
+    },
+    "categoryTickets": {
+        "type": "chart",
+        "header": "Ticket Type Wise Tickets",
+        "icon": "chart-pie",
+        "color": "tempting-azure"
+    },
+    "priorityTickets": {
+        "type": "chart",
+        "header": "Priority Wise Tickets",
+        "icon": "chart-pie",
+        "color": "young-passion"
+    },
+    "statusTickets": {
+        "type": "chart",
+        "header": "Status Wise Tickets",
+        "icon": "chart-bar",
+        "color": "ripe-malinka"
+    }
+}

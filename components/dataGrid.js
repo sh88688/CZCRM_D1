@@ -4,18 +4,13 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.css';
 
 class Datagrid extends React.Component {
 	constructor(props){
-				super(props);
+		super(props);
+  }
 
-			}
-
-  render() {
-  	
+  render() {	
+    const {keyField, data, columns} = this.props;
     return (
-         <BootstrapTable  keyField={this.props.keyField} data={ this.props.data }  columns={this.props.columns} striped hover condensed/>
-          // <React.Fragment>
-       
-        
-       
+         <BootstrapTable  keyField={keyField} data={ data }  columns={columns} striped hover condensed/>
     );
   }
 }

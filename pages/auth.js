@@ -10,46 +10,17 @@ class  AuthPage extends Component  {
   
   constructor(props){
     super(props);
-    this.inputHandler=this.inputHandler.bind(this);
-    // this.fetchCaller=this.fetchCaller.bind(this);
     this.state={email:"",password:""}
   }
-
-  //  async  fetchCaller(url,options){
-  //   try{
-     
-  //     let response=await fetch(url,options);
-      
-  //     let data=await response.json();
-  //     return data;
-  //   }
-  //   catch(err){
-  //     console.log(err);
-  //   }
-    
-  //  } 
-   
-  
   clickHandler = (event) => {
     event.preventDefault();
-    window.location="/dashboard";
+    window.location="/dashboard";  
     /*
     const url = new URL(`http://api.cz-tuts.com/login`);
-    const fetchCallOptions = {
-          body: JSON.stringify(reqBody),
-          method:'post',
-          headers: {
-          'Content-Type': 'application/json' 
-        },
-        credentials:'include'
-      };
-      const result = fetchCall(url, fetchCallOptions, "json");
-
     const reqBody={
       email: this.state.email,
       password: this.state.password
     };
-    const url = new URL(`http://api.cz-tuts.com/login`);
     const fetchCallOptions = {
           body: JSON.stringify(reqBody),
           method:'post',
@@ -57,25 +28,22 @@ class  AuthPage extends Component  {
           'Content-Type': 'application/json' 
         },
         credentials:'include'
-      };
-
-    const result = fetchCall(url, fetchCallOptions, "json");
-     
+    };
+    //API CALL:
+    const result = fetchCall(url, fetchCallOptions, "json");   
     result.then(function(data){
-   // console.log(data);
+        // console.log(data);
      if(data.status){
-      // toaster.success("Successfully Logged In");
-     document.cookie='nodeSessID='+data.nodeSessID+";maxAge=3600000;path='/';domain='cz-tuts.com'";
-       window.location="/dashboard";
+        // toaster.success("Successfully Logged In");
+        document.cookie='nodeSessID='+data.nodeSessID+";maxAge=3600000;path='/';domain='cz-tuts.com'";
+        window.location="/dashboard";
      }
      else{
       alert(data.message);
-     }
-  });
-*/
+     }});
+     */
   }
-   inputHandler(event){
-    
+   inputHandler = (event) =>{
     this.setState({[event.target.name]:event.target.value});
   }
   render(){

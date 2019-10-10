@@ -68,9 +68,7 @@ class Dashboard extends Component {
       },
       categoryTickets: {
         chart: PieChart,
-        data: [
-          
-        ]
+        data: []
       },
       priorityTickets: {
         chart: PieChart,
@@ -95,7 +93,6 @@ class Dashboard extends Component {
 
   componentDidMount() {
     this.updateHandle();
-    // setInterval(this.updateHandle,3000);
   }
 
   updateHandle = () => {
@@ -120,8 +117,7 @@ class Dashboard extends Component {
           this.updateDataState(dataObject,"priorityTickets");
           this.updateDataState(dataObject,"statusTickets");
         }
-      })
-
+      });
     }
     catch (error) {
         console.log(error);
@@ -176,8 +172,6 @@ class Dashboard extends Component {
 			
 		
   // }
-
-
 
   toggleCollapse = () =>{
     this.setState({isOpen : !this.state.isOpen});

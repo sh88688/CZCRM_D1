@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon} from "mdbreact";
 import "../Styles/dashboard.css";
-class Header extends React.Component {
+
+class Header extends Component {
   constructor(props)
   {
 	super(props);

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import fetch from 'isomorphic-unfetch';
 //import Config from "../static/configs/urlConfig.json";
 import { MDBContainer,MDBAlert, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-class  AuthPage extends React.Component  {
+class  AuthPage extends Component  {
   
   constructor(props){
     super(props);

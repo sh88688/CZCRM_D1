@@ -130,72 +130,78 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mdbreact__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Styles/dashboard.css */ "./Styles/dashboard.css");
 /* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/card.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/card.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-const Cards = props => {
-  const {
-    config,
-    content
-  } = props; //Can use type received in props???
+class Cards extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+  }
 
-  return __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    sm: "4",
-    className: "py-3 mt-2 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], {
-    className: "hoverable cardShadow",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], {
-    className: "pt-2 overflowHidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], {
-    className: "pb-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: undefined
-  }, __jsx("span", {
-    className: `iconHovered p-3 ${config.color}-gradient`,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    className: `white-text`,
-    size: "2x",
-    icon: config.icon,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: undefined
-  })), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
-  }, config.header)), content)));
-};
+  render() {
+    const {
+      config,
+      content
+    } = this.props;
+    return __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+      sm: "4",
+      className: "py-3 mt-2 ",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], {
+      className: "hoverable cardShadow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], {
+      className: "pt-2 overflowHidden",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], {
+      className: "pb-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, __jsx("span", {
+      className: `iconHovered p-3 ${config.color}-gradient`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
+      className: `white-text`,
+      size: "2x",
+      icon: config.icon,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    })), __jsx("span", {
+      className: "float-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, config.header)), content)));
+  }
+
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Cards);
 
@@ -216,193 +222,200 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mdbreact__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Styles/dashboard.css */ "./Styles/dashboard.css");
 /* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/cardContent.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/cardContent.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-const CardContent = props => {
-  const {
-    primary,
-    secondary
-  } = props.data;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
-  }, __jsx("span", {
-    className: "float-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: undefined
-  }, primary.title), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: undefined
-  }, primary.value))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBProgress"], {
-    material: true,
-    animated: true,
-    value: primary.progress_value,
-    height: "4px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
-  }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: undefined
-  }, __jsx("small", {
-    className: "text-muted",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: undefined
-  }, __jsx("span", {
-    className: "float-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: undefined
-  }, primary.progress_title), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: undefined
-  }, `(${primary.progress_value}) %`)))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: undefined
-  }, __jsx("span", {
-    className: "float-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: undefined
-  }, secondary.title), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: undefined
-  }, secondary.value))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBProgress"], {
-    material: true,
-    animated: true,
-    value: secondary.progress_value,
-    height: "4px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: undefined
-  }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }, __jsx("small", {
-    className: "text-muted",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
-  }, __jsx("span", {
-    className: "float-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: undefined
-  }, secondary.progress_title), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: undefined
-  }, `(${secondary.progress_value}) %`)))));
-};
+class CardContent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const {
+      primary,
+      secondary
+    } = this.props.data;
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+      className: "my-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "float-left",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, primary.title), __jsx("span", {
+      className: "float-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, primary.value))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+      className: "my-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBProgress"], {
+      material: true,
+      animated: true,
+      value: primary.progress_value,
+      height: "4px",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+      className: "my-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, __jsx("small", {
+      className: "text-muted",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "float-left",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, primary.progress_title), __jsx("span", {
+      className: "float-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, `(${primary.progress_value}) %`)))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+      className: "my-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "float-left",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, secondary.title), __jsx("span", {
+      className: "float-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }, secondary.value))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+      className: "my-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBProgress"], {
+      material: true,
+      animated: true,
+      value: secondary.progress_value,
+      height: "4px",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+      className: "my-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, __jsx("small", {
+      className: "text-muted",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "float-left",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, secondary.progress_title), __jsx("span", {
+      className: "float-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, `(${secondary.progress_value}) %`)))));
+  }
+
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (CardContent);
 
@@ -453,7 +466,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Styles/dashboard.css */ "./Styles/dashboard.css");
 /* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/header.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/header.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -647,22 +660,29 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/loadingContent.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/loadingContent.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const LoadingContent = props => {
-  return __jsx("img", {
-    src: "https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif",
-    className: "img-fluid",
-    alt: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: undefined
-  });
-};
+class LoadingContent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return __jsx("img", {
+      src: "https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif",
+      className: "img-fluid",
+      alt: "",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    });
+  }
+
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (LoadingContent);
 
@@ -683,7 +703,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_chartjs_2__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Styles/dashboard.css */ "./Styles/dashboard.css");
 /* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/pieChart.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/pieChart.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -712,7 +732,7 @@ const options = {
   }
 };
 
-class PieChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+class PieChart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
   }
@@ -732,13 +752,13 @@ class PieChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 50
       },
       __self: this
     }, __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 51
       },
       __self: this
     }, __jsx(react_chartjs_2__WEBPACK_IMPORTED_MODULE_1__["Doughnut"], {
@@ -747,7 +767,7 @@ class PieChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       options: options,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 52
       },
       __self: this
     })), __jsx("div", {
@@ -757,7 +777,7 @@ class PieChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 54
       },
       __self: this
     }, DATA.labels.map((label, index) => __jsx("div", {
@@ -765,13 +785,13 @@ class PieChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       key: label,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 56
       },
       __self: this
     }, __jsx("h6", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 59
       },
       __self: this
     }, DATA.labels[index]), __jsx("p", {
@@ -781,7 +801,7 @@ class PieChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 60
       },
       __self: this
     }, Math.floor(DATA.datasets[0].data[index] / SUM * 100), "%")))));
@@ -806,12 +826,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! recharts */ "recharts");
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/verticalBarChart.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/verticalBarChart.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  // const VerticalBarchart = React.createClass({ See why error in this
 
-class VerticalBarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+class VerticalBarChart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
     const colors = ["#0712B3", "#006600", "#7C8AEE", "#cc0066", "#993300"];
     return __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["BarChart"], {
@@ -827,21 +847,21 @@ class VerticalBarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 9
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["CartesianGrid"], {
       stroke: "#f5f5f5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 16
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["XAxis"], {
       type: "number",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 17
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["YAxis"], {
@@ -849,13 +869,13 @@ class VerticalBarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       type: "category",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 18
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 19
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Bar"], {
@@ -864,7 +884,7 @@ class VerticalBarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       fill: "#413ea0",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 20
       },
       __self: this
     }, this.props.data.map((entry, index) => __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Cell"], {
@@ -872,7 +892,7 @@ class VerticalBarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       fill: colors[index % 20],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 23
       },
       __self: this
     }))));
@@ -6241,7 +6261,7 @@ var _Data_ConfigData_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*
 
 
 
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/pages/dashboard.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/pages/dashboard.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 
@@ -6506,7 +6526,7 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/shivam-c-zentrix/Desktop/CZCRM_D1/pages/dashboard.js */"./pages/dashboard.js");
+module.exports = __webpack_require__(/*! /Users/tvt/Desktop/Present/Study/React/CZCRM_D1/pages/dashboard.js */"./pages/dashboard.js");
 
 
 /***/ }),

@@ -20,75 +20,102 @@ module.exports = JSON.parse("{\"totalTickets\":{\"type\":\"cardContent\",\"heade
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Styles/dashboard.css */ "./Styles/dashboard.css");
-/* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/card.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Styles/dashboard.css */ "./Styles/dashboard.css");
+/* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 
-var Cards = function Cards(props) {
-  var config = props.config,
-      content = props.content; //Can use type received in props???
 
-  return __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    sm: "4",
-    className: "py-3 mt-2 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], {
-    className: "hoverable cardShadow",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], {
-    className: "pt-2 overflowHidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], {
-    className: "pb-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, __jsx("span", {
-    className: "iconHovered p-3 ".concat(config.color, "-gradient"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    className: "white-text",
-    size: "2x",
-    icon: config.icon,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  })), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, config.header)), content)));
-};
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/card.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
+
+
+
+var Cards =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Cards, _Component);
+
+  function Cards(props) {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Cards);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Cards).call(this, props));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Cards, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          config = _this$props.config,
+          content = _this$props.content;
+      return __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCol"], {
+        sm: "4",
+        className: "py-3 mt-2 ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCard"], {
+        className: "hoverable cardShadow",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCardBody"], {
+        className: "pt-2 overflowHidden",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCardText"], {
+        className: "pb-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, __jsx("span", {
+        className: "iconHovered p-3 ".concat(config.color, "-gradient"),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBIcon"], {
+        className: "white-text",
+        size: "2x",
+        icon: config.icon,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      })), __jsx("span", {
+        className: "float-right",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, config.header)), content)));
+    }
+  }]);
+
+  return Cards;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Cards);
 
@@ -103,197 +130,224 @@ var Cards = function Cards(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Styles/dashboard.css */ "./Styles/dashboard.css");
-/* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/cardContent.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Styles/dashboard.css */ "./Styles/dashboard.css");
+/* harmony import */ var _Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Styles_dashboard_css__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 
-var CardContent = function CardContent(props) {
-  var _props$data = props.data,
-      primary = _props$data.primary,
-      secondary = _props$data.secondary;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, __jsx("span", {
-    className: "float-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, primary.title), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, primary.value))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBProgress"], {
-    material: true,
-    animated: true,
-    value: primary.progress_value,
-    height: "4px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, __jsx("small", {
-    className: "text-muted",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("span", {
-    className: "float-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, primary.progress_title), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, "(".concat(primary.progress_value, ") %"))))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, __jsx("span", {
-    className: "float-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, secondary.title), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, secondary.value))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBProgress"], {
-    material: true,
-    animated: true,
-    value: secondary.progress_value,
-    height: "4px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "my-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, __jsx("small", {
-    className: "text-muted",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: this
-  }, __jsx("span", {
-    className: "float-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
-  }, secondary.progress_title), __jsx("span", {
-    className: "float-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
-  }, "(".concat(secondary.progress_value, ") %"))))));
-};
+
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/cardContent.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
+
+
+
+var CardContent =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(CardContent, _Component);
+
+  function CardContent(props) {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CardContent);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(CardContent).call(this, props));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CardContent, [{
+    key: "render",
+    value: function render() {
+      var _this$props$data = this.props.data,
+          primary = _this$props$data.primary,
+          secondary = _this$props$data.secondary;
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_5__["Fragment"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBRow"], {
+        className: "my-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCol"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, __jsx("span", {
+        className: "float-left",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, primary.title), __jsx("span", {
+        className: "float-right",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, primary.value))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBRow"], {
+        className: "my-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCol"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBProgress"], {
+        material: true,
+        animated: true,
+        value: primary.progress_value,
+        height: "4px",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBRow"], {
+        className: "my-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCol"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, __jsx("small", {
+        className: "text-muted",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, __jsx("span", {
+        className: "float-left",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, primary.progress_title), __jsx("span", {
+        className: "float-right",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, "(".concat(primary.progress_value, ") %"))))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBRow"], {
+        className: "my-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCol"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
+      }, __jsx("span", {
+        className: "float-left",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }, secondary.title), __jsx("span", {
+        className: "float-right",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }, secondary.value))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBRow"], {
+        className: "my-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCol"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBProgress"], {
+        material: true,
+        animated: true,
+        value: secondary.progress_value,
+        height: "4px",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }))), __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBRow"], {
+        className: "my-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, __jsx(mdbreact__WEBPACK_IMPORTED_MODULE_6__["MDBCol"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, __jsx("small", {
+        className: "text-muted",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, __jsx("span", {
+        className: "float-left",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, secondary.progress_title), __jsx("span", {
+        className: "float-right",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, "(".concat(secondary.progress_value, ") %"))))));
+    }
+  }]);
+
+  return CardContent;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (CardContent);
 
@@ -386,7 +440,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/header.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/header.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -589,24 +643,51 @@ function (_React$Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/loadingContent.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 
 
-var LoadingContent = function LoadingContent(props) {
-  return __jsx("img", {
-    src: "https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif",
-    className: "img-fluid",
-    alt: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  });
-};
+
+
+
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/loadingContent.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
+
+var LoadingContent =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(LoadingContent, _Component);
+
+  function LoadingContent(props) {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, LoadingContent);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(LoadingContent).call(this, props));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(LoadingContent, [{
+    key: "render",
+    value: function render() {
+      return __jsx("img", {
+        src: "https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif",
+        className: "img-fluid",
+        alt: "",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      });
+    }
+  }]);
+
+  return LoadingContent;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (LoadingContent);
 
@@ -636,7 +717,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/pieChart.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/pieChart.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -667,8 +748,8 @@ var options = {
 
 var PieChart =
 /*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(PieChart, _React$Component);
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(PieChart, _Component);
 
   function PieChart(props) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, PieChart);
@@ -698,13 +779,13 @@ function (_React$Component) {
       return __jsx(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         },
         __self: this
       }, __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 51
         },
         __self: this
       }, __jsx(react_chartjs_2__WEBPACK_IMPORTED_MODULE_6__["Doughnut"], {
@@ -713,7 +794,7 @@ function (_React$Component) {
         options: options,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 52
         },
         __self: this
       })), __jsx("div", {
@@ -723,7 +804,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 54
         },
         __self: this
       }, DATA.labels.map(function (label, index) {
@@ -732,13 +813,13 @@ function (_React$Component) {
           key: label,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 56
           },
           __self: this
         }, __jsx("h6", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60
+            lineNumber: 59
           },
           __self: this
         }, DATA.labels[index]), __jsx("p", {
@@ -748,7 +829,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 60
           },
           __self: this
         }, Math.floor(DATA.datasets[0].data[index] / SUM * 100), "%"));
@@ -757,7 +838,7 @@ function (_React$Component) {
   }]);
 
   return PieChart;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (PieChart);
 
@@ -785,15 +866,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/components/verticalBarChart.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/components/verticalBarChart.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
  // const VerticalBarchart = React.createClass({ See why error in this
 
 var VerticalBarChart =
 /*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(VerticalBarChart, _React$Component);
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(VerticalBarChart, _Component);
 
   function VerticalBarChart() {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, VerticalBarChart);
@@ -818,21 +899,21 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 9
         },
         __self: this
       }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["CartesianGrid"], {
         stroke: "#f5f5f5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 16
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["XAxis"], {
         type: "number",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 17
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["YAxis"], {
@@ -840,13 +921,13 @@ function (_React$Component) {
         type: "category",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 18
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["Tooltip"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 19
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["Bar"], {
@@ -855,7 +936,7 @@ function (_React$Component) {
         fill: "#413ea0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 20
         },
         __self: this
       }, this.props.data.map(function (entry, index) {
@@ -864,7 +945,7 @@ function (_React$Component) {
           fill: colors[index % 20],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 23
           },
           __self: this
         });
@@ -873,7 +954,7 @@ function (_React$Component) {
   }]);
 
   return VerticalBarChart;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (VerticalBarChart);
 
@@ -69893,10 +69974,10 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdashboard&absolutePagePath=%2Fhome%2Fshivam-c-zentrix%2FDesktop%2FCZCRM_D1%2Fpages%2Fdashboard.js!./":
-/*!********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdashboard&absolutePagePath=%2Fhome%2Fshivam-c-zentrix%2FDesktop%2FCZCRM_D1%2Fpages%2Fdashboard.js ***!
-  \********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdashboard&absolutePagePath=%2FUsers%2Ftvt%2FDesktop%2FPresent%2FStudy%2FReact%2FCZCRM_D1%2Fpages%2Fdashboard.js!./":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdashboard&absolutePagePath=%2FUsers%2Ftvt%2FDesktop%2FPresent%2FStudy%2FReact%2FCZCRM_D1%2Fpages%2Fdashboard.js ***!
+  \**********************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -72510,12 +72591,12 @@ if (false) {} else {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -76286,12 +76367,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -76926,12 +77007,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -77801,12 +77882,12 @@ var defaults = chart_js__WEBPACK_IMPORTED_MODULE_2___default.a.defaults;
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -85661,12 +85742,12 @@ var classNamesShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -110548,7 +110629,7 @@ var _Data_ConfigData_json__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*
 
 
 
-var _jsxFileName = "/home/shivam-c-zentrix/Desktop/CZCRM_D1/pages/dashboard.js";
+var _jsxFileName = "/Users/tvt/Desktop/Present/Study/React/CZCRM_D1/pages/dashboard.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement;
 
 
@@ -110829,25 +110910,25 @@ function (_Component) {
 /***/ }),
 
 /***/ 5:
-/*!************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fdashboard&absolutePagePath=%2Fhome%2Fshivam-c-zentrix%2FDesktop%2FCZCRM_D1%2Fpages%2Fdashboard.js ***!
-  \************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fdashboard&absolutePagePath=%2FUsers%2Ftvt%2FDesktop%2FPresent%2FStudy%2FReact%2FCZCRM_D1%2Fpages%2Fdashboard.js ***!
+  \**************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fdashboard&absolutePagePath=%2Fhome%2Fshivam-c-zentrix%2FDesktop%2FCZCRM_D1%2Fpages%2Fdashboard.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdashboard&absolutePagePath=%2Fhome%2Fshivam-c-zentrix%2FDesktop%2FCZCRM_D1%2Fpages%2Fdashboard.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fdashboard&absolutePagePath=%2FUsers%2Ftvt%2FDesktop%2FPresent%2FStudy%2FReact%2FCZCRM_D1%2Fpages%2Fdashboard.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdashboard&absolutePagePath=%2FUsers%2Ftvt%2FDesktop%2FPresent%2FStudy%2FReact%2FCZCRM_D1%2Fpages%2Fdashboard.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_b35e09dc2ca94ac6d9c1":
+/***/ "dll-reference dll_13346faca0e924a89b24":
 /*!*******************************************!*\
-  !*** external "dll_b35e09dc2ca94ac6d9c1" ***!
+  !*** external "dll_13346faca0e924a89b24" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_b35e09dc2ca94ac6d9c1;
+module.exports = dll_13346faca0e924a89b24;
 
 /***/ })
 

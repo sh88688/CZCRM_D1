@@ -1,11 +1,12 @@
-import React from "react";
-import fetchCall from '../components/fetchCaller';
+import React, { Component } from "react";
+// import fetchCall from '../components/fetchCaller';
 //import Config from "../static/configs/urlConfig.json";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-class  AuthPage extends React.Component  {
+
+class  AuthPage extends Component  {
   
   constructor(props){
     super(props);

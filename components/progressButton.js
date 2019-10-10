@@ -1,6 +1,14 @@
+import React, { Component } from "react";
 
-const ProgressButton = () => (
-    <div></div>
-)
+class ProgressButton extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div></div>
+        );
+    }
+}
 
 export default ProgressButton;

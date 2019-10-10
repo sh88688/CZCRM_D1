@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
 import "../Styles/dashboard.css";
 
@@ -24,8 +24,7 @@ const options = {
   }
 };
 
-class PieChart extends React.Component {
-
+class PieChart extends Component {
   constructor(props){
     super(props);
   }
@@ -48,26 +47,25 @@ class PieChart extends React.Component {
     };
 
     return (
-        <React.Fragment>
+      <React.Fragment>
         <div>
-        <Doughnut key={SUM} data={DATA} options={options} />
+          <Doughnut key={SUM} data={DATA} options={options} />
         </div>
         <div className="stats" style={{overflow: "auto"}}>
-        {DATA.labels.map((label,index) => (
-        <div
-          className="device"
-          key={label}>
-          <h6>{DATA.labels[index]}</h6>
-            <p className="h6" style={{color: `${DATA.datasets[0].backgroundColor[index]}`}}>
-            {Math.floor(DATA.datasets[0].data[index]/SUM*100)}%
-          </p>
+          {DATA.labels.map((label,index) => (
+          <div
+            className="device"
+            key={label}>
+            <h6>{DATA.labels[index]}</h6>
+              <p className="h6" style={{color: `${DATA.datasets[0].backgroundColor[index]}`}}>
+              {Math.floor(DATA.datasets[0].data[index]/SUM*100)}%
+            </p>
+          </div>
+          ))}
         </div>
-        ))}
-        </div>
-        </React.Fragment>
-  );
- }
-  
+      </React.Fragment>
+    );
+  }
 }
 
 export default PieChart;

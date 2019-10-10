@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 // import '../css/form.css'
 
-export default class Form extends React.Component {
+class Form extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -53,3 +53,5 @@ export default class Form extends React.Component {
     )
   }
 }
+
+export default Form;

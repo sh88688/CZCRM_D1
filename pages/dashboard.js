@@ -92,7 +92,8 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    this.updateHandle();
+    this.authHandle();
+    // this.updateHandle();
   }
 
   updateHandle = () => {
@@ -125,8 +126,33 @@ class Dashboard extends Component {
 
   }
 
+  authHandle = () =>{
+    const url = new URL(`http://api.cz-tuts.com/dashboard`);
+    const fetchCallOptions ={
+          method:"post",
+          credentials:'include', 
+          headers: {
+           'Content-Type': 'application/json' 
+          }
+      };
+    try {
+      const result = fetchCall(url, fetchCallOptions, "json");
+      console.log(result);
+      result.then(data => {
+        if(data.status==1){
+          this.updateHandle();
+        }
+        else{
+          // error message here
+        }
+      });
+    }
+    catch (error) {
+        console.log(error);
+    }
+  }
   // async  updateHandle() {
-	//     const	postData	=	{};
+	//  const	postData	=	{};
 	// 	postData.clientId	=	"1";
   //   const 	postJson	=	JSON.stringify(postData);
   //   try {

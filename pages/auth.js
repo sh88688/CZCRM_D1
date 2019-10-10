@@ -30,15 +30,15 @@ class  AuthPage extends Component  {
     //API CALL:
     const result = fetchCall(url, fetchCallOptions, "json");   
     result.then(function(data){
-        console.log('data ==> ',data);
-     if(data.status){
-        // toaster.success("Successfully Logged In");
-        document.cookie='nodeSessID='+data.nodeSessID+";maxAge=3600000;path='/';domain='cz-tuts.com'";
-        window.location="/dashboard";
-     }
-     else{
-      alert(data.message);
-     }});
+        if(data.status){
+            // toaster.success("Successfully Logged In");
+            document.cookie='nodeSessID='+data.nodeSessID+";maxAge=3600000;path='/';domain='cz-tuts.com'";
+            window.location="/dashboard";
+        }
+        else{
+          alert(data.message);
+        }
+    });
   }
    inputHandler = (event) =>{
     this.setState({[event.target.name]:event.target.value});

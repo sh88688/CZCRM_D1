@@ -38,8 +38,7 @@ class Dashboard extends Component {
         chart: VerticalBarChart,
         data: []
       }
-}
-    this.updateHandle=this.updateHandle.bind(this);
+    }
    
   }
 
@@ -57,64 +56,35 @@ class Dashboard extends Component {
     this.authHandle();
   }
 
-  updateHandle = () => {
-    const postData          =       {};
-    postData.clientId       =       "2";
-    const   postJson        =       JSON.stringify(postData);
-    const queryParam = `?postData=${postJson}`;
-    const url = new URL(`http://172.16.3.46/CZCRM/api/dashboard_request.php${queryParam}`);
-    const fetchCallOptions = {
-       method: "GET",
-     };
-    try {
-      const result = fetchCall(url, fetchCallOptions, "json");
-      result.then(dataObject => {
-        if(dataObject.status == 'error'){
-          // error message here
-        }
-        else{
-          this.updateDataState(dataObject);
-        }
-      });
-    }
-    catch (error) {
-        console.log(error);
-    }
-  }
-
   authHandle = async () => {
     const url = new URL(`http://api.cz-tuts.com/dashboard`);
     const fetchCallOptions = {
-    method: "post",
-    credentials: 'include',
-    headers: {
-    'Content-Type': 'application/json'
-    }
+      method: "post",
+      credentials: 'include',
+      headers: {
+      'Content-Type': 'application/json'
+      }
     };
       try {
           const resData = await fetch(url, fetchCallOptions);
           if (resData.status == 200) {
-          const jsonData = await resData.json();
-          console.log('data my ',jsonData);
-          if (jsonData.status == 1) {
-          const data = jsonData.data;
-          let dataObject = data;
-          this.updateDataState(dataObject);
+            const jsonData = await resData.json();
+              if (jsonData.status == 1) {
+              const data = jsonData.data;
+              let dataObject = data;
+              this.updateDataState(dataObject);
+              } 
           } 
           else {
-
-          }
-          } else {
-          console.log(resData.status);
-          if (resData.status == 401 || resData.status == 403) {
-          window.location = "/auth";
-          }
+              if (resData.status == 401 || resData.status == 403) {
+                window.location = "/auth";
+              }
           }
       } 
       catch (error) {
         console.log(error);
       }
-    }
+  }
 
 
   toggleCollapse = () =>{

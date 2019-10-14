@@ -68,7 +68,7 @@ class Dashboard extends Component {
     const chartModule = ['categoryTickets','statusTickets','priorityTickets'];
     const header =  <Header title="Dashboard" collapse={this.toggleCollapse} isOpen={this.state.isOpen} />;
     const progressCards = progressModule.map((module, index) => (
-      <Card key={index} config={ConfigData[module]} content={<CardContent key={index} config={ConfigData[`${module}Config`]} data={this.state[module].data} />} />
+      <Card  key={index} config={ConfigData[module]} content={<CardContent key={index} config={ConfigData[`${module}Config`]} data={this.state[module].data} />} />
     ));
     const chartCards = chartModule.map((module, index) => {
       let CHART = this.state[module].chart;
@@ -77,14 +77,14 @@ class Dashboard extends Component {
 
 		 return(
 			<MDBContainer fluid>
-        <MDBRow >
+        <MDBRow className="mb-4">
 					{header}
 				</MDBRow>
-        {this.state.isGraphLoaded && [progressCards, chartCards].map(item =>{
+        {this.state.isGraphLoaded && [progressCards, chartCards].map(item => (
           <MDBRow >
             {item}
           </MDBRow>
-        })}
+        ))}
         {this.state.isGraphLoaded || <MDBRow className="justify-content-center"><LoadingContent /></MDBRow>}
 			</MDBContainer>
 		)

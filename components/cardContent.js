@@ -22,13 +22,13 @@ class CardContent extends Component{
     const col6 = <Fragment><small className="text-muted"><span className="float-left">{config.secondary.progress_title}</span><span className="float-right">{`(${data.secondary.progress_value}) %`}</span></small></Fragment>;
 
         return(
-            [col1,col2,col3,col4,col5,col6].map(column => {
+            [col1,col2,col3,col4,col5,col6].map(column => (
                 <MDBRow className="my-2">
                 <MDBCol>
                     {column}
                 </MDBCol>
                 </MDBRow>
-            })
+            ))
         );
     }
 }

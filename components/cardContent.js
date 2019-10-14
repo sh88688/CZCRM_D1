@@ -3,12 +3,9 @@ import {MDBProgress, MDBCol, MDBRow} from "mdbreact";
 import "../static/css/dashboard.css";
 
 class CardContent extends Component{
-    constructor(props){
-        super(props);
-    }
     render(){
     const {config, data} = this.props;
-    
+
     const col1 =  <Fragment><span className="float-left">{config.primary.title}</span>
                 <span className="float-right">{data.primary.value}</span></Fragment>;
 

@@ -23,7 +23,27 @@ const options = {
     footerFontColor: '#263238'
   }
 };
-
+const ChartBuilder = ({SUM, DATA}) => {
+  return ( 
+      <React.Fragment>
+      <div>
+      <Doughnut key={SUM} data={DATA} options={options} />
+      </div>
+      <div className="stats" style={{overflow: "auto"}}>
+      {DATA.labels.map((label,index) => (
+      <div
+      className="device"
+      key={label}>
+      <h6>{DATA.labels[index]}</h6>
+      <p className="h6" style={{color: `${DATA.datasets[0].backgroundColor[index]}`}}>
+      {Math.floor(DATA.datasets[0].data[index]/SUM*100)}%
+      </p>
+      </div>
+      ))}
+      </div>
+      </React.Fragment>
+  
+  )}
 class PieChart extends Component {
   constructor(props){
     super(props);
@@ -45,25 +65,9 @@ class PieChart extends Component {
       }
       ]
     };
-
+    
     return (
-      <React.Fragment>
-        <div>
-          <Doughnut key={SUM} data={DATA} options={options} />
-        </div>
-        <div className="stats" style={{overflow: "auto"}}>
-          {DATA.labels.map((label,index) => (
-          <div
-            className="device"
-            key={label}>
-            <h6>{DATA.labels[index]}</h6>
-              <p className="h6" style={{color: `${DATA.datasets[0].backgroundColor[index]}`}}>
-              {Math.floor(DATA.datasets[0].data[index]/SUM*100)}%
-            </p>
-          </div>
-          ))}
-        </div>
-      </React.Fragment>
+      <ChartBuilder DATA={DATA} SUM={SUM} />
     );
   }
 }

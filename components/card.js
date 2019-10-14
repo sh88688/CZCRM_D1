@@ -3,9 +3,6 @@ import { MDBIcon, MDBCol, MDBCard, MDBCardBody, MDBCardText } from "mdbreact";
 import "../static/css/dashboard.css";
 
 class Cards extends Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         const {config, content} = this.props;
         return(

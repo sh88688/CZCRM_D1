@@ -3,10 +3,6 @@ import {MDBDropdownItem, MDBIcon} from "mdbreact";
 import "../static/css/dashboard.css";
 import NavBar from './navBar';
 class Header extends React.Component {
-  constructor(props)
-  {
-    super(props);
-  }
   logoutHandle = async () => {
     const url = new URL(`http://api.cz-tuts.com/logout`);
     const fetchCallOptions = {

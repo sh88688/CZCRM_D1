@@ -35,7 +35,7 @@ class Header extends React.Component {
     }
   render(){
     const {title, isOpen, collapse} = this.props;
-
+    const dropItem = [{icon:"user-circle",text:"My Profile",handle:null},{icon:"home",text:"Dashboard",handle:null},{icon:"home",text:"Change Password",handle:null},{icon:"power-off",text:"Logout",handle:this.logoutHandle}]
     return(
         <MDBNavbar color="special-color-dark" dark style={{ width: "100%" }} expand="lg">
         <MDBNavbarToggler onClick={collapse} />
@@ -51,10 +51,12 @@ class Header extends React.Component {
                   <MDBIcon far icon="user" />
                 </MDBDropdownToggle>
                 <MDBDropdownMenu right basic className="dropdown-default">
-                  <MDBDropdownItem href="profile"><MDBIcon className={`mr-2`} icon="user-circle" />My Profile</MDBDropdownItem>
-                  <MDBDropdownItem href="dashboard"><MDBIcon className={`mr-2`} icon="home" />Dashboard</MDBDropdownItem>
-                  <MDBDropdownItem href="#!"><MDBIcon className={`mr-2`} icon="key" />Change Password</MDBDropdownItem>
-                  <MDBDropdownItem href="#!" onClick={this.logoutHandle}><MDBIcon className={`mr-2`} icon="power-off" />Logout</MDBDropdownItem>
+                {dropItem.map(item =>{
+                    <MDBDropdownItem href="#" onClick={item.handle}>
+                    <MDBIcon className={`mr-2`} icon={item.icon} />
+                    {item.text}
+                    </MDBDropdownItem>
+                })}
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>

@@ -7,56 +7,31 @@ class CardContent extends Component{
         super(props);
     }
     render(){
-        const {config, data} = this.props;
+    const {config, data} = this.props;
+    
+    const col1 =  <Fragment><span className="float-left">{config.primary.title}</span>
+                <span className="float-right">{data.primary.value}</span></Fragment>;
+
+    const col2 =  <MDBProgress material animated value={data.primary.progress_value} height="4px" />;
+
+    const col3 = <Fragment><small className="text-muted"><span className="float-left">{config.primary.progress_title}
+                </span><span className="float-right">{`(${data.primary.progress_value}) %`}</span></small></Fragment>;
+
+    const col4 = <Fragment><span className="float-left">{config.secondary.title}</span><span className="float-right">
+    {data.secondary.value}</span></Fragment>;
+
+    const col5 = <MDBProgress material animated value={data.secondary.progress_value} height="4px" />;
+
+    const col6 = <Fragment><small className="text-muted"><span className="float-left">{config.secondary.progress_title}</span><span className="float-right">{`(${data.secondary.progress_value}) %`}</span></small></Fragment>;
+
         return(
-            <Fragment>
+            [col1,col2,col3,col4,col5,col6].map(column => {
                 <MDBRow className="my-2">
-                    <MDBCol>
-                    <span className="float-left">{config.primary.title}</span>
-                    <span className="float-right">
-                    {data.primary.value}
-                    </span>
-                    </MDBCol>
+                <MDBCol>
+                    {column}
+                </MDBCol>
                 </MDBRow>
-                <MDBRow className="my-2">
-                    <MDBCol>
-                    <MDBProgress material animated value={data.primary.progress_value} height="4px" />
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow className="my-1">
-                    <MDBCol>
-                    <small className="text-muted">
-                    <span className="float-left">{config.primary.progress_title}</span>
-                    <span className="float-right">
-                    {`(${data.primary.progress_value}) %`}
-                    </span>
-                    </small>
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow className="my-2">
-                    <MDBCol>
-                    <span className="float-left">{config.secondary.title}</span>
-                    <span className="float-right">
-                    {data.secondary.value}
-                    </span>
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow className="my-2">
-                    <MDBCol>
-                    <MDBProgress material animated value={data.secondary.progress_value} height="4px" />
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow className="my-1">
-                    <MDBCol>
-                    <small className="text-muted">
-                    <span className="float-left">{config.secondary.progress_title}</span>
-                    <span className="float-right">
-                    {`(${data.secondary.progress_value}) %`}
-                    </span>
-                    </small>
-                    </MDBCol>
-                </MDBRow>
-            </Fragment>
+            })
         );
     }
 }

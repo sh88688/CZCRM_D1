@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon} from "mdbreact";
+import {MDBDropdownItem, MDBIcon} from "mdbreact";
 import "../static/css/dashboard.css";
 import NavBar from './navBar';
 class Header extends React.Component {
@@ -40,8 +40,13 @@ class Header extends React.Component {
     const brand = <Fragment><img src="https://www.c-zentrix.com/images/landing-page/preloader.gif" width="30" height="30" alt="C-zentrix" />
     <span className="ml-2"> {title}</span></Fragment>
 
-    const dropItem = [{icon:"user-circle",text:"My Profile",handle:null},{icon:"home",text:"Dashboard",handle:null},{icon:"home",text:"Change Password",handle:null},{icon:"power-off",text:"Logout",handle:this.logoutHandle}]
-    
+    const dropArray = [{icon:"user-circle",text:"My Profile",handle:null},{icon:"home",text:"Dashboard",handle:null},{icon:"home",text:"Change Password",handle:null},{icon:"power-off",text:"Logout",handle:this.logoutHandle}]
+    const dropItem = dropArray.map(item =>{
+                      <MDBDropdownItem href="#" onClick={item.handle}>
+                      <MDBIcon className={`mr-2`} icon={item.icon} />
+                      {item.text}
+                      </MDBDropdownItem>
+                  })
     return(
       <NavBar brand={brand} isOpen={isOpen} collapse={collapse} dropItem={dropItem} />
     );

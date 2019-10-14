@@ -19,12 +19,7 @@ class NavBar extends React.Component {
                   <MDBIcon far icon="user" />
                 </MDBDropdownToggle>
                 <MDBDropdownMenu right basic className="dropdown-default">
-                {dropItem.map(item =>{
-                    <MDBDropdownItem href="#" onClick={item.handle}>
-                    <MDBIcon className={`mr-2`} icon={item.icon} />
-                    {item.text}
-                    </MDBDropdownItem>
-                })}
+                {dropItem}
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>

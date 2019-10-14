@@ -1,43 +1,18 @@
 import React, { Component } from "react";
 import { MDBContainer, MDBRow } from "mdbreact";
-import VerticalBarChart from '../components/verticalBarChart';
 import Card from '../components/card';
 import CardContent from '../components/cardContent';
 import Header from '../components/header';
 import ConfigData from '../data/configData.json';
-import PieChart from '../components/pieChart';
 import LoadingContent from '../components/loadingContent';
 import "../static/css/dashboard.css";
+import intialData from '../data/intialData';
 
 class Dashboard extends Component {
   constructor(props)
   {
     super(props);
-    this.state = {
-      isOpen: false,
-      isGraphLoaded: false,
-      totalTickets: {
-        data: {}
-      },
-      totalMails: {
-        data: {}
-      },
-      totalUsers: {
-        data: {}
-      },
-      categoryTickets: {
-        chart: PieChart,
-        data: []
-      },
-      priorityTickets: {
-        chart: PieChart,
-        data: []
-      },
-      statusTickets: {
-        chart: VerticalBarChart,
-        data: []
-      }
-    }
+    this.state = intialData;
    
   }
 
@@ -85,51 +60,34 @@ class Dashboard extends Component {
       }
   }
 
-
   toggleCollapse = () =>{
     this.setState({isOpen : !this.state.isOpen});
   }
   render() {
     const progressModule = ['totalTickets','totalMails','totalUsers'];
     const chartModule = ['categoryTickets','statusTickets','priorityTickets'];
+    const header =  <Header title="Dashboard" collapse={this.toggleCollapse} isOpen={this.state.isOpen} />;
+    const progressCards = progressModule.map((module, index) => (
+      <Card key={index} config={ConfigData[module]} content={<CardContent key={index} config={ConfigData[`${module}Config`]} data={this.state[module].data} />} />
+    ));
+    const chartCards = chartModule.map((module, index) => {
+      let CHART = this.state[module].chart;
+      return  (<Card key={index} config={ConfigData[module]} content={<CHART key={index} data={this.state[module].data} />} />)
+    });
 
-	 if(this.state.isGraphLoaded==false){
 		 return(
 			<MDBContainer fluid>
-				<MDBRow >
-					<Header title="Dashbaord" isOpen={this.state.isOpen} collapse={() => this.toggleCollapse}/>
+        <MDBRow >
+					{header}
 				</MDBRow>
-				<MDBRow className="justify-content-center">
-					<LoadingContent />
-				</MDBRow>
+        {this.state.isGraphLoaded && [progressCards, chartCards].map(item =>{
+          <MDBRow >
+            {item}
+          </MDBRow>
+        })}
+        {this.state.isGraphLoaded || <MDBRow className="justify-content-center"><LoadingContent /></MDBRow>}
 			</MDBContainer>
 		)
    }
-	 else{
-		return (
-      <MDBContainer fluid>
-      <MDBRow >
-         <Header title="Dashboard" collapse={this.toggleCollapse} isOpen={this.state.isOpen} />
-       </MDBRow>
-      <MDBRow className="mt-4">
-          {progressModule.map((module, index) => (
-            <Card key={index} config={ConfigData[module]}
-             content={<CardContent key={index} config={ConfigData[`${module}Config`]} data={this.state[module].data}/>}
-            />
-          ))}
-      </MDBRow>
-      <MDBRow>
-        {chartModule.map((module, index) => {
-          let CHART = this.state[module].chart;
-          return  (
-            <Card key={index} config={ConfigData[module]}
-            content={<CHART key={index} data={this.state[module].data} />}
-            />
-          )})}
-      </MDBRow>
-    </MDBContainer>
-		);
-	}
-  }
 }
 export default Dashboard;

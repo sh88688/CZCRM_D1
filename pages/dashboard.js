@@ -1,4 +1,3 @@
-import { fetchCall } from '../functions/modularFunc';
 import React, { Component } from "react";
 import { MDBContainer, MDBRow } from "mdbreact";
 import VerticalBarChart from '../components/verticalBarChart';

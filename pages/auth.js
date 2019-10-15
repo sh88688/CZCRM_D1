@@ -7,6 +7,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import "../static/css/auth.css";
 import AuthCard from '../components/authCard';
+import signInData from '../data/signInInput';
 
 const Forgot = () =>(
   <p className="font-small blue-text d-flex justify-content-end pb-3">
@@ -56,7 +57,7 @@ class  AuthPage extends Component  {
     this.setState({[event.target.name]:event.target.value});
   }
   render(){
-    const Input = [{label:"Your Email",type:"email",name:"email"},{label:"Your Password",type:"password",name:"password"}].map((fields, index) => (
+    const Input = signInData.map((fields, index) => (
       <MDBInput  key={index} label={fields.label} group type={fields.type} error="wrong" success="right" name ={fields.name} onChange={this.inputHandler} required />
     ));
     const footerConfig = {link: "/register",title:"Not a member?",linkText:"Sign Up"};

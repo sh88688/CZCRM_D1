@@ -7,6 +7,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import "../static/css/auth.css";
 import AuthCard from '../components/authCard';
+import signUpData from '../data/signUpInput';
 
 class  AuthPage extends Component  {
   constructor(props){
@@ -51,13 +52,7 @@ class  AuthPage extends Component  {
   }
 
   render(){
-    const Input = [
-      {label:"Your Name",type:"text",name:"name"},
-      {label:"Your Email",type:"email",name:"email"},
-      {label:"Your Mobile",type:"text",name:"mobile"},
-      {label:"Your Password",type:"password",name:"password"},
-      {label:"Confirm Password",type:"password",name:"repassword"}
-    ].map((fields, index) => (
+    const Input = signUpData.map((fields, index) => (
       <MDBInput  key={index} label={fields.label} group type={fields.type} error="wrong" success="right" name ={fields.name} onChange={this.inputHandler} required />
     ));
     const footerConfig = {link: "/auth",title:"Already member?",linkText:"Sign In"};

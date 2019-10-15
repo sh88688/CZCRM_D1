@@ -1,0 +1,94 @@
+{
+    "totalTickets": {
+       "data": {
+          "primary": {
+             "value": 415,
+             "progress_value": 23
+          },
+          "secondary": {
+             "value": 49,
+             "progress_value": 74
+          }
+       }
+    },
+    "totalMails": {
+       "data": {
+          "primary": {
+             "value": 122,
+             "progress_value": 49
+          },
+          "secondary": {
+             "value": 77,
+             "progress_value": 74
+          }
+       }
+    },
+    "totalUsers": {
+       "data": {
+          "primary": {
+             "value": 119,
+             "progress_value": 55
+          },
+          "secondary": {
+             "value": 49,
+             "progress_value": 74
+          }
+       }
+    },
+    "priorityTickets": {
+       "data": [
+          {
+             "name": "Critical",
+             "value": 30
+          },
+          {
+             "name": "Semi-Critical",
+             "value": 40
+          },
+          {
+             "name": "Non-Critical",
+             "value": 20
+          }
+       ]
+    },
+    "statusTickets": {
+       "data": [
+          {
+             "name": "New",
+             "value": 24
+          },
+          {
+             "name": "InProgress",
+             "value": 67
+          },
+          {
+             "name": "Closed",
+             "value": 236
+          },
+          {
+             "name": "Reopen",
+             "value": 97
+          },
+          {
+             "name": "Resolved",
+             "value": 110
+          }
+       ]
+    },
+    "categoryTickets": {
+       "data": [
+          {
+             "name": "Complaint",
+             "value": 5
+          },
+          {
+             "name": "Query",
+             "value": 3
+          },
+          {
+             "name": "Suggestion",
+             "value": 2
+          }
+       ]
+    }
+ }

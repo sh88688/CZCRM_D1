@@ -7,7 +7,7 @@ import ConfigData from '../data/configData.json';
 import LoadingContent from '../components/loadingContent';
 import "../static/css/dashboard.css";
 import intialData from '../data/intialData';
-
+// import testJson from './test.json';
 class Dashboard extends Component {
   constructor(props)
   {
@@ -28,6 +28,7 @@ class Dashboard extends Component {
 
   componentDidMount() {
     this.authHandle();
+    // this.updateDataState(testJson);
   }
 
   authHandle = async () => {
@@ -80,8 +81,8 @@ class Dashboard extends Component {
         <MDBRow className="mb-4">
 					{header}
 				</MDBRow>
-        {this.state.isGraphLoaded && [progressCards, chartCards].map(item => (
-          <MDBRow >
+        {this.state.isGraphLoaded && [progressCards, chartCards].map((item, index) => (
+          <MDBRow key={index} >
             {item}
           </MDBRow>
         ))}

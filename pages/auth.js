@@ -57,17 +57,7 @@ class  AuthPage extends Component  {
   }
   render(){
     const Input = [{label:"Your Email",type:"email",name:"email"},{label:"Your Password",type:"password",name:"password"}].map((fields, index) => (
-      <MDBInput
-        key={index}
-        label={fields.label}
-        group
-        type={fields.type}
-        error="wrong"
-        success="right"
-        name ={fields.name}
-        onChange={this.inputHandler}
-        required
-      />
+      <MDBInput  key={index} label={fields.label} group type={fields.type} error="wrong" success="right" name ={fields.name} onChange={this.inputHandler} required />
     ));
     const footerConfig = {link: "/register",title:"Not a member?",linkText:"Sign Up"};
     const btnConfig = {btnText: "Sign In", btnClick: this.clickHandler};
@@ -77,9 +67,7 @@ class  AuthPage extends Component  {
     <MDBContainer >
       <MDBRow center="true" >
         {[signInCard,worldMap].map( (column, index) => (
-            <MDBCol key={index} md="5">
-            {column}
-            </MDBCol>
+            <MDBCol key={index} md="5">{column}</MDBCol>
         ))}
       </MDBRow>
     </MDBContainer>

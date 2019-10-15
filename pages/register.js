@@ -13,7 +13,6 @@ class  AuthPage extends Component  {
     super(props);
     this.state={email:"",name:"",mobile:"",password:"",repassword:""}
   }
-
   clickHandler = (event) => {
   event.preventDefault();
   const url = new URL(`http://api.cz-tuts.com/register`);
@@ -59,19 +58,8 @@ class  AuthPage extends Component  {
       {label:"Your Password",type:"password",name:"password"},
       {label:"Confirm Password",type:"password",name:"repassword"}
     ].map((fields, index) => (
-      <MDBInput
-        key={index}
-        label={fields.label}
-        group
-        type={fields.type}
-        error="wrong"
-        success="right"
-        name ={fields.name}
-        onChange={this.inputHandler}
-        required
-      />
+      <MDBInput  key={index} label={fields.label} group type={fields.type} error="wrong" success="right" name ={fields.name} onChange={this.inputHandler} required />
     ));
-
     const footerConfig = {link: "/auth",title:"Already member?",linkText:"Sign In"};
     const btnConfig = {btnText: "Sign In", btnClick: this.clickHandler};
     const signUpCard = <AuthCard btn={btnConfig} inputs={Input} forgot="" footer={footerConfig} /> ;
@@ -80,9 +68,7 @@ class  AuthPage extends Component  {
       <MDBContainer >
         <MDBRow center="true" >
           {[signUpCard,worldMap].map( (column, index) => (
-              <MDBCol key={index} md="5">
-              {column}
-              </MDBCol>
+          <MDBCol key={index} md="5">{column}</MDBCol>
           ))}
         </MDBRow>
       </MDBContainer>

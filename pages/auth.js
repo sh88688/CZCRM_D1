@@ -5,7 +5,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import "../static/css/auth.css";
-import { MDBInput} from 'mdbreact';
 import AuthLayout from '../components/authLayout';
 import signInData from '../data/signInInput';
 
@@ -56,13 +55,10 @@ class  AuthPage extends Component  {
       this.setState({[event.target.name]:event.target.value});
     }
     render(){
-      const Input = signInData.map((fields, index) => (
-        <MDBInput  key={index} label={fields.label} group type={fields.type} error="wrong" success="right" name ={fields.name} onChange={this.inputHandler} required />
-      ));
       const footerConfig = {link: "/register",title:"Not a member?",linkText:"Sign Up"};
       const btnConfig = {btnText: "Sign In", btnClick: this.clickHandler};
       return (
-        <AuthLayout btnConfig={btnConfig} inputData={Input} forgotComp={<Forgot />} footerConfig={footerConfig} />
+        <AuthLayout btnConfig={btnConfig} inputHandler={this.inputHandler} inputData={signInData} forgotComp={<Forgot />} footerConfig={footerConfig} />
       );
     }
 };

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol} from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBInput} from 'mdbreact';
 import AuthCard from '../components/authCard';
 
 class  AuthLayout extends Component  {
   render(){
-    const {inputData, footerConfig, btnConfig, forgotComp} = this.props;
-    const Card = <AuthCard btn={btnConfig} inputs={inputData} forgot={forgotComp} footer={footerConfig} /> ;
+    const {inputData, inputHandler, footerConfig, btnConfig, forgotComp} = this.props;
+    const Input = inputData.map((fields, index) => (
+      <MDBInput  key={index} label={fields.label} group type={fields.type} error="wrong" success="right" name ={fields.name} onChange={inputHandler} required />
+    ));
+    const Card = <AuthCard btn={btnConfig} inputs={Input} forgot={forgotComp} footer={footerConfig} /> ;
     const worldMap = <div className="left-card-login"><img src="static/img/worldmap.png"></img></div>;
   return (
     <MDBContainer >

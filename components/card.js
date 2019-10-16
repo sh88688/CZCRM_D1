@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { MDBIcon, MDBCol, MDBCard, MDBCardBody, MDBCardText } from "mdbreact";
+import PropTypes from "prop-types";
 import "../static/css/dashboard.css";
 
 class Cards extends Component{
@@ -24,5 +25,8 @@ class Cards extends Component{
         );
     }
 }
-
+Cards.propTypes = {
+    config: PropTypes.object.isRequired,
+    content: PropTypes.node.isRequired,
+  }
 export default Cards;

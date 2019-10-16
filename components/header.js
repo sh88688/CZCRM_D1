@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import {MDBDropdownItem, MDBIcon} from "mdbreact";
+import PropTypes from "prop-types";
 import "../static/css/dashboard.css";
 import NavBar from './navBar';
 class Header extends React.Component {
@@ -48,5 +49,9 @@ class Header extends React.Component {
     );
   }
 }
-
+Header.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  collapse: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired
+}
 export default Header;

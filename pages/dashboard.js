@@ -7,13 +7,12 @@ import ConfigData from '../data/configData.json';
 import LoadingContent from '../components/loadingContent';
 import "../static/css/dashboard.css";
 import intialData from '../data/intialData';
-// import testJson from './test.json';
+import testJson from './test.json';
 class Dashboard extends Component {
   constructor(props)
   {
     super(props);
-    this.state = intialData;
-   
+    this.state = intialData;  
   }
 
   updateDataState = (dataObject) => {
@@ -27,8 +26,8 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    this.authHandle();
-    // this.updateDataState(testJson);
+    // this.authHandle();
+    this.updateDataState(testJson);
   }
 
   authHandle = async () => {
@@ -73,7 +72,7 @@ class Dashboard extends Component {
     ));
     const chartCards = chartModule.map((module, index) => {
       let CHART = this.state[module].chart;
-      return  (<Card key={index} config={ConfigData[module]} content={<CHART key={index} data={this.state[module].data} />} />)
+      return (<Card key={index} config={ConfigData[module]} content={<CHART key={index} data={this.state[module].data} />} />)
     });
 
 		 return(

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBInput} from 'mdbreact';
+import PropTypes from "prop-types";
 import AuthCard from '../components/authCard';
 
 class  AuthLayout extends Component  {
@@ -21,5 +22,11 @@ class  AuthLayout extends Component  {
   );
 }
 };
-
+AuthLayout.propTypes = {
+  inputData: PropTypes.array.isRequired,
+  inputHandler: PropTypes.func.isRequired,
+  footerConfig: PropTypes.object.isRequired,
+  btnConfig: PropTypes.object.isRequired,
+  forgotComp: PropTypes.object,
+}
 export default AuthLayout;

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {MDBProgress, MDBCol, MDBRow} from "mdbreact";
+import PropTypes from "prop-types";
 import "../static/css/dashboard.css";
 
 const TitleBuilder = ({value}) => (
@@ -41,5 +42,8 @@ class CardContent extends Component{
         );
     }
 }
-
+CardContent.propTypes = {
+    config: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
+  }
 export default CardContent;

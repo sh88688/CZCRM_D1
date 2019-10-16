@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
+import PropTypes from "prop-types";
 import "../static/css/dashboard.css";
 
 const options = {
@@ -50,12 +51,13 @@ class PieChart extends Component {
   }
   
   render (){
-    const SUM = this.props.data.reduce((accum, {value})=> accum + value,0);
+    const {data} = this.props;
+    const SUM = data.reduce((accum, {value})=> accum + value,0);
     const DATA= {
-      labels: this.props.data.map(data => data.name),
+      labels: data.map(item => item.name),
       datasets: [
       {
-        data: this.props.data.map(data => data.value),
+        data: data.map(item => item.value),
         backgroundColor: ["#e53935", "#ffa000", "#303f9f"],
         hoverBackgroundColor: [
           "#f44336",
@@ -71,5 +73,7 @@ class PieChart extends Component {
     );
   }
 }
-
+PieChart.propTypes = {
+  data: PropTypes.array.isRequired,
+}
 export default PieChart;

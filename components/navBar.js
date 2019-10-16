@@ -1,8 +1,9 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon} from "mdbreact";
 import "../static/css/dashboard.css";
-class NavBar extends React.Component {
+import PropTypes from "prop-types";
 
+class NavBar extends React.Component {
   render(){
     const {isOpen, collapse, brand, dropItem} = this.props;
     return(
@@ -29,5 +30,10 @@ class NavBar extends React.Component {
     );
   }
 }
-
+NavBar.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  collapse: PropTypes.func.isRequired,
+  brand: PropTypes.object.isRequired,
+  dropItem: PropTypes.node.isRequired
+}
 export default NavBar;

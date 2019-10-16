@@ -14,37 +14,37 @@ class  AuthPage extends Component  {
     this.state={email:"",name:"",mobile:"",password:"",repassword:""}
   }
   clickHandler = (event) => {
-  event.preventDefault();
-  const url = new URL(`http://api.cz-tuts.com/register`);
-  const reqBody={
-    email: this.state.email,
-    name: this.state.name,
-    mobile: this.state.mobile,
-    password: this.state.password,
-    repassword: this.state.repassword
-  };
-  const fetchCallOptions = {
-        body: JSON.stringify(reqBody),
-        method:'post',
-        headers: {
-        'Content-Type': 'application/json' 
-      },
-      // credentials:'include'
-  };
-  //API CALL:
-  const result = fetchCall(url, fetchCallOptions, "text");   
-  result.then(data => {
-    let dataObj = JSON.parse(data);
-    console.log(data)
-    if(dataObj.status){
-      // toaster.success("Successfully Logged In");
-      alert(dataObj.message);
-      window.location="/auth";
-    }
-    else{
-      alert(dataObj.message);
-    }
-  });
+    event.preventDefault();
+    const url = new URL(`http://api.cz-tuts.com/register`);
+    const reqBody={
+      email: this.state.email,
+      name: this.state.name,
+      mobile: this.state.mobile,
+      password: this.state.password,
+      repassword: this.state.repassword
+    };
+    const fetchCallOptions = {
+          body: JSON.stringify(reqBody),
+          method:'post',
+          headers: {
+          'Content-Type': 'application/json' 
+        },
+        // credentials:'include'
+    };
+    //API CALL:
+    const result = fetchCall(url, fetchCallOptions, "text");   
+    result.then(data => {
+      let dataObj = JSON.parse(data);
+      console.log(data)
+      if(dataObj.status){
+        // toaster.success("Successfully Logged In");
+        alert(dataObj.message);
+        window.location="/auth";
+      }
+      else{
+        alert(dataObj.message);
+      }
+    });
   }
   inputHandler = (event) =>{
     this.setState({[event.target.name]:event.target.value});

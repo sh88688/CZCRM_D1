@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import {MDBCard, MDBCardBody, MDBBtn} from "mdbreact";
 import SocialBtn from './socialBtn';
 import AuthFooter from './authFooter';
@@ -7,6 +8,7 @@ import "../static/css/dashboard.css";
 class AuthCard extends Component{
     render(){
     const { inputs, btn, footer, forgot } = this.props;
+
         return(
             <MDBCard className="mt-5">
             <MDBCardBody className="mx-4">
@@ -27,5 +29,10 @@ class AuthCard extends Component{
         )
     }
 }
-
+AuthCard.propTypes = {
+    inputs: PropTypes.array.isRequired,
+    btn: PropTypes.object.isRequired,
+    footer: PropTypes.object.isRequired,
+    forgot: PropTypes.node,
+}
 export default AuthCard;

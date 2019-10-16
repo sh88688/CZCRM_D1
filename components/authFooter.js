@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {MDBModalFooter} from "mdbreact";
-
+import PropTypes from "prop-types";
 import "../static/css/dashboard.css";
 
 class AuthFooter extends Component{
@@ -18,5 +18,9 @@ class AuthFooter extends Component{
         );
     }
 }
-
+AuthFooter.propTypes = {
+  title: PropTypes.string.isRequired,
+  linkText: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+}
 export default AuthFooter;

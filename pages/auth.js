@@ -24,32 +24,32 @@ class  AuthPage extends Component  {
     }
     clickHandler = (event) => {
       event.preventDefault(); 
-      // window.location="/dashboard";
-      const url = new URL(`http://api.cz-tuts.com/login`);
-      const reqBody={
-        email: this.state.email,
-        password: this.state.password
-      };
-      const fetchCallOptions = {
-            body: JSON.stringify(reqBody),
-            method:'post',
-            headers: {
-            'Content-Type': 'application/json' 
-          },
-          credentials:'include'
-      };
-      //API CALL:
-      const result = fetchCall(url, fetchCallOptions, "json");   
-      result.then(data => {
-          if(data.status){
-              // toaster.success("Successfully Logged In");
-              document.cookie='nodeSessID='+data.nodeSessID+";maxAge=3600000;path='/';domain='cz-tuts.com'";
-              window.location="/dashboard";
-          }
-          else{
-            alert(data.message);
-          }
-      });
+      window.location="/dashboard";
+      // const url = new URL(`http://api.cz-tuts.com/login`);
+      // const reqBody={
+      //   email: this.state.email,
+      //   password: this.state.password
+      // };
+      // const fetchCallOptions = {
+      //       body: JSON.stringify(reqBody),
+      //       method:'post',
+      //       headers: {
+      //       'Content-Type': 'application/json' 
+      //     },
+      //     credentials:'include'
+      // };
+      // //API CALL:
+      // const result = fetchCall(url, fetchCallOptions, "json");   
+      // result.then(data => {
+      //     if(data.status){
+      //         // toaster.success("Successfully Logged In");
+      //         document.cookie='nodeSessID='+data.nodeSessID+";maxAge=3600000;path='/';domain='cz-tuts.com'";
+      //         window.location="/dashboard";
+      //     }
+      //     else{
+      //       alert(data.message);
+      //     }
+      // });
     }
     inputHandler = (event) =>{
       this.setState({[event.target.name]:event.target.value});
